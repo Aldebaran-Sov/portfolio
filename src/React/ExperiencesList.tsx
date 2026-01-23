@@ -21,7 +21,7 @@ const CategoryIcons = {
       <path d="M7 4V20H17V4H7ZM6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.5523 18.5523 22 18 22H6C5.44772 22 5 21.5523 5 21V3C5 2.44772 5.44772 2 6 2ZM12 17C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17Z"></path>
     </svg>
   ),
-  "DevOps & Sécurité": (
+  "DevOps & Securité": (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -33,34 +33,20 @@ const CategoryIcons = {
   ),
 };
 
-const SkillsList = () => {
+const ExperiencesList = () => {
   const [openItem, setOpenItem] = useState<string | null>(null);
 
   const skills = {
-    "Full Stack": [
-      "Python, Java et Windev",
-      "UX/UI Design",
-      "Bases de données (SQL & NoSQL)",
-      "APIs REST",
-      "Frameworks Backend (FastAPI, Spring Boot)",
-      "Git & GitHub",
-
+    "CODISUD , alternance : Développeur Full Stack 2024/2025": [
+      "Masterfranchise qui gère des Spart et Vival",
+      "Développement d'un module pour l'ERP avec Windev",
+      "Mise en place d'un ETL pour le traitement de fichiers bancaires (CFONB)",
+      "UI/UX pour la comptabilisation des écritures bancaires",
     ],
-    "IA & Data Science": [
-      "Python (Pandas, Scikit-learn)",
-      "Data, analyse & visualisation",
-      "Machine learning",
-      "ETL pipelines",
-      "Notebooks (Jupyter, Google Colab)",
-      "Model Context Protocol (MCP)",
-    ],
-    "DevOps & Sécurité": [
-      "Containerisation (Docker, Docker Compose)",
-      "DevContainers (Docker, VS Code)",
-      "CI/CD pipelines & GitHub Workflows",
-      "Réseaux & Active Directory",
-      "Bonnes pratiques de sécurité",
-      "Virtualisation (VirtualBox, WSL)",
+    "EDUCACODE , alternance : Développeur Full Stack Mobile 2022/2023": [
+      "Entreprise qui développe une application de formation au code de la route pour les jeunes",
+      "Amélioration de l'application mobile avec Flutter",
+      "Debugging et optimisation des performances",
     ],
   };
 
@@ -69,19 +55,19 @@ const SkillsList = () => {
   };
 
   return (
-    <div className="text-left pt-3 md:pt-9">
+    <div className="text-center pt-3 md:pt-9">
       <h3 className="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-6">
-        Compétences
+        Expériences
       </h3>
       <ul className="space-y-4 mt-4 text-lg">
         {Object.entries(skills).map(([category, items]) => (
           <li key={category} className="w-full">
             <div
               onClick={() => toggleItem(category)}
-              className="md:w-[400px] w-full bg-[#1414149c] rounded-2xl text-left hover:bg-opacity-80 transition-all border border-[var(--white-icon-tr)] cursor-pointer overflow-hidden"
+              className="w-full bg-[#1414149c] rounded-2xl text-left hover:bg-opacity-80 transition-all border border-[var(--white-icon-tr)] cursor-pointer overflow-hidden"
             >
               <div className="flex items-center gap-3 p-4">
-                {CategoryIcons[category]}
+                {/* {CategoryIcons[category]} */}
                 <div className="flex items-center gap-2 flex-grow justify-between">
                   <div className="min-w-0 max-w-[200px] md:max-w-none overflow-hidden">
                     <span className="block truncate text-[var(--white)] text-lg">
@@ -125,4 +111,4 @@ const SkillsList = () => {
   );
 };
 
-export default SkillsList;
+export default ExperiencesList;
