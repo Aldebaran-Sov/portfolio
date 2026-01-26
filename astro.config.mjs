@@ -1,12 +1,15 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-
 import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
+  
+  site: 'https://aldebaran-sov.github.io',
+  base: '/portfolio',
+  
   vite: {
     resolve: {
       alias: {
@@ -23,5 +26,4 @@ export default defineConfig({
     host: true,
     port: 4321,
   },
-  site: 'https://Aldebaran-Sov/github.io/portfolio/',
 });
