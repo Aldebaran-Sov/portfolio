@@ -1,0 +1,11 @@
+{
+  "name": "Astro Dev Container",
+  "image": "node:24.13.0-alpine3.23",
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["astro-build.astro-vscode"]
+    }
+  },
+  "forwardPorts": [4321]
+}
