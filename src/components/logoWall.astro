@@ -10,6 +10,9 @@ const technologies = [
   "scikit-learn",
   "mysql",
 ];
+
+// ✅ Ajoutez cette ligne pour le base path
+const basePath = import.meta.env.BASE_URL;
 ---
 
 <div class="relative overflow-x-hidden py-8">
@@ -27,7 +30,7 @@ const technologies = [
       [...technologies, ...technologies, ...technologies].map((tech) => (
         <div class="flex items-center gap-2 group transition-all duration-300">
           <img
-            src={`/svg/${tech}.svg`}
+            src={`${basePath}/public/svg/${tech}.svg`}
             alt={tech}
             class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
             width="30"
@@ -54,6 +57,10 @@ const technologies = [
   }
   .animate-scroll {
     animation: scroll 60s linear infinite;
+  }
+
+  .animate-paused:hover {
+    animation-play-state: paused;
   }
 
   @media (min-width: 768px) {
