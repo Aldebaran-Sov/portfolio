@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import docker from "../../public/docker.png";
 import obsidian from "../../public/obsidian.png";
+import python from "../../public/python.svg";
 
 interface Project {
   title: string;
@@ -9,6 +10,7 @@ interface Project {
   link: string;
   preview: string;
   status: string;
+  fit?: "cover" | "contain";
 }
 
 const projects: Project[] = [
@@ -25,6 +27,14 @@ const projects: Project[] = [
     link: "https://github.com/Aldebaran-Sov/DevSecOps_Docker_Secure",
     preview: "https://github.com/Aldebaran-Sov/DevSecOps_Docker_Secure",
     status: "Perso",
+  },
+  {
+    title: "POC machine learning pour prix d'appartement",
+    image: python as ImageMetadata,
+    link: "https://github.com/Aldebaran-Sov/Scrapping_ML_for_apartment_price",
+    preview: "https://github.com/Aldebaran-Sov/Scrapping_ML_for_apartment_price",
+    status: "EPSI",
+    fit: "contain",
   },
 ];
 ---
@@ -51,7 +61,7 @@ const projects: Project[] = [
                 <Image
                   src={project.image}
                   alt={project.title}
-                  class="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300"
+                  class={`w-full h-48 md:h-72 ${project.fit || 'object-cover'} group-hover:scale-105 transition-transform duration-300`}
                 />
               </div>
               <div class="flex items-center px-3">
