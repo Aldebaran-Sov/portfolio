@@ -38,7 +38,7 @@ const ExperiencesList = () => {
 
   const skills = {
     "CODISUD , alternance : Développeur Full Stack 2024/2025": [
-      "Masterfranchise qui gère des Spart et Vival",
+      "Masterfranchise qui gère des Spar et Vival",
       "Développement d'un module pour l'ERP avec Windev",
       "Mise en place d'un ETL pour le traitement de fichiers bancaires (CFONB)",
       "UI/UX pour la comptabilisation des écritures bancaires",
