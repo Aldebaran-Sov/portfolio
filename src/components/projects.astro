@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import forgejo from "../../public/forgejo.png";
 import docker from "../../public/docker.png";
 import obsidian from "../../public/obsidian.png";
 import python from "../../public/python.svg";
@@ -14,6 +15,13 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: "Forgejo Server",
+    image: forgejo as ImageMetadata,
+    link: "https://github.com/Aldebaran-Sov/forgejo_server",
+    preview: "https://github.com/Aldebaran-Sov/forgejo_server",
+    status: "Perso",
+  },
   {
     title: "Vault Obsidian",
     image: obsidian as ImageMetadata,
